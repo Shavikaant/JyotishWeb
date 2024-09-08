@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <title>Astrology Website</title>
+
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          background-color: #161a1d; /* Dark background */
+          color: #d3d3d3; /* Light text */
+          margin: 0;
+          padding: 0;
+      }
+      header {
+          background-color: #0b090a; /* Darkest background */
+          padding: 20px;
+          text-align: center;
+      }
+      h1 {
+          color: #e5383b; /* Red accent */
+      }
+      nav {
+          margin: 20px 0;
+      }
+      nav a {
+          color: #f5f3f4; /* Light text for links */
+          margin: 0 15px;
+          text-decoration: none;
+      }
+      nav a:hover {
+          color: #ba181b; /* Darker red on hover */
+      }
+      section {
+          padding: 20px;
+          background-color: #660708; /* Dark red background for sections */
+          margin: 20px;
+          border-radius: 5px;
+      }
+      .button {
+          background-color: #a4161a; /* Medium red for buttons */
+          color: #ffffff; /* White text for buttons */
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+      }
+      .button:hover {
+          background-color: #e5383b; /* Lighter red on hover */
+      }
+      footer {
+          background-color: #0b090a; /* Darkest background */
+          color: #b1a7a6; /* Subtle text color */
+          text-align: center;
+          padding: 10px;
+      }
+  </style>
+
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <div class="container">
+        <div class="logo">
+            <img src="/Images/logo.png" alt="Logo">
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#blogs">Blogs</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#newsletter" class="btn">Subscribe</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-container">
+        <div class="hero-content">
+            <h1>Discover Your Destiny</h1>
+            <p>Get accurate readings and insights into your zodiac signs.</p>
+            <a href="#services" class="btn-hero">Explore Services</a>
+        </div>
+    </div>
+</section>
+
+<!-- About Us Section -->
+<section id="about" class="about-us">
+    <div class="container">
+        <div class="about-us-content">
+            <h2 style="color: #ff6600;">About Us</h2>
+            <p>We are dedicated to providing accurate astrology readings and insights.</p>
+            <a href="#services" class="btn-about">Learn More</a>
+        </div>
+        <div class="about-us-image">
+            <img src="/Images/about-us-image.jpg.jpg" alt="About Us">
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="services">
+    <div class="container">
+        <h2 style="color: #ff6600;">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <img src="/Images/personalized-reading.jpg.jpg" alt="Service 1">
+                <h3>Astrology Readings</h3>
+                <p>Get personalized astrology readings tailored for you.</p>
+            </div>
+            <div class="service-item">
+                <img src="/Images/career-guidance.jpg" alt="Service 2">
+                <h3>Tarot Card Reading</h3>
+                <p>Explore the mystical world of tarot with our experts.</p>
+            </div>
+            <!-- Add more services as needed -->
+        </div>
+    </div>
+</section>
+
+<!-- Featured Blogs Section -->
+<section id="blogs" class="featured-blogs">
+    <div class="container">
+        <h2 style="color: #ff6600;">Featured Blogs</h2>
+        <div class="blogs-grid">
+            <div class="blog-item">
+                <img src="path/to/blog1.jpg" alt="Blog 1">
+                <h3>Understanding Your Zodiac</h3>
+                <p>Explore the traits and characteristics of your zodiac sign.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+            <div class="blog-item">
+                <img src="path/to/blog2.jpg" alt="Blog 2">
+                <h3>The Power of Astrology</h3>
+                <p>Discover how astrology can impact your life decisions.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+            <!-- Add more blog posts as needed -->
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="testimonials">
+    <div class="container">
+        <h2 style="color: #ff6600;">What Our Clients Say</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-item">
+                <img src="/Images/the-best-class-yoga.jpg" alt="Client 1">
+                <p>"The readings were spot on! Highly recommend."</p>
+                <h3>John Doe</h3>
+                <span>Astrology Enthusiast</span>
+            </div>
+            <div class="testimonial-item">
+                <img src="path/to/client2.jpg" alt="Client 2">
+                <p>"A life-changing experience. Thank you!"</p>
+                <h3>Jane Smith</h3>
+                <span>Regular Client</span>
+            </div>
+            <!-- Add more testimonials as needed -->
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section id="newsletter" class="newsletter">
+    <div class="container">
+        <div class="card">
+            <div class="newsletter-image">
+                <img src="/Images/newsletter-image.jpg" alt="Newsletter">
+            </div>
+            <div class="newsletter-text">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Stay updated with the latest astrology insights and services.</p>
+                <form>
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Astrology Website. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
