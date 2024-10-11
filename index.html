@@ -170,7 +170,7 @@
             <img src="Images/client2.jpg" alt="Client Image" class="rounded-circle img-fluid">
           </div>
           <p class="client-quote">"The accuracy of the readings is incredible! I am more confident in my decisions now."</p>
-          <h5 class="client-name">Rajesh Kumar</h5>
+          <h5 class="client-name">Vanshika Sharma</h5>
           <p class="client-job">Software Engineer</p>
         </div>
       </div>
@@ -235,95 +235,8 @@
 
 
     <!-- JavaScript for active links -->
-    <script>
-      const navLinks = document.querySelectorAll('.nav-link');
-      navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-          navLinks.forEach(nav => nav.classList.remove('active', 'text-warning'));
-          this.classList.add('active', 'text-warning');
-        });
-      });
-
-       // Sample daily Rashifal data (Replace with actual API data or logic)
-       const rashifalData = {
-    aries: "Today is a great day for new beginnings. Be bold in your choices.",
-    taurus: "You may face some financial challenges today. Stay calm and plan well.",
-    gemini: "Communication will be key today. Express your thoughts clearly.",
-    cancer: "Focus on your family and personal well-being. A peaceful day ahead.",
-    leo: "You will shine at work today. Stay confident and take the lead.",
-    virgo: "Your attention to detail will help you solve a problem today.",
-    libra: "Balance is essential today. Stay centered and avoid conflicts.",
-    scorpio: "Be mindful of your emotions today. Stay grounded.",
-    sagittarius: "Adventure awaits! Be open to new experiences.",
-    capricorn: "Hard work will pay off today. Keep pushing forward.",
-    aquarius: "Creative ideas will flow easily today. Share them with others.",
-    pisces: "Trust your intuition today. It will guide you in the right direction."
-};
-
-// Handle zodiac sign selection
-const zodiacSelect = document.getElementById('zodiac-sign');
-const rashifalDisplay = document.getElementById('rashifal-display');
-const rashifalText = document.getElementById('rashifal-text');
-const rashifalTitle = document.getElementById('rashifal-title');
-
-zodiacSelect.addEventListener('change', function() {
-    const selectedSign = this.value;
-
-    if (rashifalData[selectedSign]) {
-        rashifalText.textContent = rashifalData[selectedSign];
-        rashifalTitle.textContent = `Your Daily Rashifal for ${this.options[this.selectedIndex].text}`;
-    } else {
-        rashifalText.textContent = "Select your Zodiac sign above to see today's Rashifal.";
-        rashifalTitle.textContent = "Your Daily Rashifal";
-    }
-});
-
-document.getElementById('fetchHoroscope').addEventListener('click', function() {
-    const sign = zodiacSelect.value;
-
-    if (sign === "Select your Zodiac Sign") {
-        alert("Please select a Zodiac sign!");
-        return;
-    }
-
-    const resultDiv = document.getElementById('horoscopeResult');
-    resultDiv.innerHTML = '<p>Loading...</p>'; // Loading message
-
-    fetch('https://aztro.sameerkumar.website/', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-        sign: 'aries',  // Example sign
-        day: 'today'
-    })
-    })
-    .then(response =>  {
-    // Check if the response is okay (status 200)
-    if (!response.ok) {
-        throw new Error('Network response was not ok: ' + response.statusText);
-    }
-    return response.json(); // Parse the JSON from the response
-})
-
-
-    .then(data => {
-        resultDiv.innerHTML = `
-            <h2>${data.sunsign} Daily Horoscope</h2>
-            <p><strong>Description:</strong> ${data.description}</p>
-            <p><strong>Mood:</strong> ${data.mood}</p>
-            <p><strong>Lucky Number:</strong> ${data.lucky_number}</p>
-            <p><strong>Lucky Color:</strong> ${data.lucky_color}</p>
-            <p><strong>Compatibility:</strong> ${data.compatibility}</p>
-        `;
-    })
-    .catch(error => {
-        console.error('Error fetching the horoscope:', error);
-        resultDiv.innerHTML = '<p class="text-danger">Failed to fetch horoscope. Please try again.</p>';
-    });
-});
-
+    <script src="/javascript/index.js">
+    
     </script>
   </body>
 </html>
