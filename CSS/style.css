@@ -4,6 +4,14 @@ body{
   background-size: cover;
 }
 
+img {
+ 
+  width: 200px;
+   
+  height: 100px;
+   
+  }
+
 .custom-nav{
   border-radius: 30px;
   padding: 10px;
