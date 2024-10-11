@@ -3,17 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Jyotish Kalash</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    
-   <link rel="stylesheet" href="CSS/style.css">
-    
+    <link rel="stylesheet" href="CSS/style.css">
   </head>
   <body>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-black custom-nav">
       <div class="container-fluid">
-        <img src="JyotishWeb/Images/logo.png" style="color: aliceblue;" alt="Your Logo" />
+        <img src="Images/logo.png" alt="Jyotish Kalash Logo" class="logo"/>
         <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -37,42 +36,45 @@
       </div>
     </nav>
 
-    <div class="hero container-fluid">
+    <!-- Hero Section -->
+    <div id="Home" class="hero container-fluid">
       <h1>Welcome to Jyotish Kalash</h1>
-      <h5>We have the best jyotish to change your life decision</h5>
+      <h5>Your destiny, our guidance.</h5>
       <div class="button-container">
         <button>Book Appointment</button>
         <button class="btn btn-secondary">Read More</button>
       </div>
     </div>
 
-    <div class="container text-center mt-5">
+    <!-- About Us Section -->
+    <div id="About Us" class="container text-center mt-5">
       <div class="row">
         <h1 class="mb-5">About Us</h1>
         <div class="col-md-6">
           <p class="text-light text-start">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. More information about the image can go here, including its significance, context, and any relevant details.
+            We provide expert astrological insights to help guide important life decisions. Our team of experienced Jyotish practitioners is here to illuminate your path.
           </p>
         </div>
         <div class="col-md-6">
           <div class="image-container">
-            <img src="/Assets/About Us.png" alt="Placeholder Image" class="img-fluid">
+            <img src="Images/about-us-image.jpg" alt="About Us Image" class="img-fluid">
           </div>
         </div>
       </div>
     </div>
 
-    <div class="container text-center mt-5">
+    <!-- Services Section -->
+    <div id="Services" class="container text-center mt-5">
       <h1 class="mb-5">Our Services</h1>
       <div class="row">
         <div class="col-md-6">
           <p class="text-light text-start">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. More information about the image can go here, including its significance, context, and any relevant details.
+            Our astrology services help you make the right choices in love, career, and health. Discover the insights you've been missing with personalized consultations.
           </p>
         </div>
         <div class="col-md-6">
           <div class="image-container">
-            <img src="/Assets/Service1.png" alt="Placeholder Image" class="img-fluid">
+            <img src="Images/career-guidance.jpg" alt="Service Image" class="img-fluid">
           </div>
         </div>
       </div>
@@ -80,12 +82,12 @@
       <div class="row mt-5">
         <div class="col-md-6 order-1 order-md-2">
           <p class="text-light text-start">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. More information about the image can go here, including its significance, context, and any relevant details.
+            Detailed yearly Rashifal readings to guide your path, helping you understand the upcoming challenges and opportunities in your personal and professional life.
           </p>
         </div>
         <div class="col-md-6 order-2 order-md-1">
           <div class="image-container">
-            <img src="/Assets/Service2.png" alt="Placeholder Image" class="img-fluid">
+            <img src="Images/love-compatibility.jpg" alt="Service Image" class="img-fluid">
           </div>
         </div>
       </div>
@@ -93,31 +95,235 @@
       <div class="row mt-5">
         <div class="col-md-6">
           <p class="text-light text-start">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. More information about the image can go here, including its significance, context, and any relevant details.
+            Custom rituals and remedies tailored specifically for your astrological chart, empowering you to take control of your future.
           </p>
         </div>
         <div class="col-md-6">
           <div class="image-container">
-            <img src="/Assets/Service3.png" alt="Placeholder Image" class="img-fluid">
+            <img src="Images/personalized-reading.jpg" alt="Service Image" class="img-fluid">
           </div>
         </div>
       </div>
     </div>
 
-    <script>
-      // Select all the nav links
-      const navLinks = document.querySelectorAll('.nav-link');
+    <!-- Rashifal Section -->
+<div id="Rashifal" class="container text-center my-5">
+  <h1 class="mb-5">Daily Rashifal</h1>
+  
+  <!-- Zodiac Sign Selection -->
+  <div class="row justify-content-center mb-4">
+    <div class="col-md-6">
+      <h1 class="mb-5">Daily Rashifal</h1>
+      <select id="zodiac-sign" class="form-select form-select-lg" aria-label="Select your Zodiac sign">
+        <option selected>Select your Zodiac Sign</option>
+        <option value="aries">Aries (मेष)</option>
+        <option value="taurus">Taurus (वृषभ)</option>
+        <option value="gemini">Gemini (मिथुन)</option>
+        <option value="cancer">Cancer (कर्क)</option>
+        <option value="leo">Leo (सिंह)</option>
+        <option value="virgo">Virgo (कन्या)</option>
+        <option value="libra">Libra (तुला)</option>
+        <option value="scorpio">Scorpio (वृश्चिक)</option>
+        <option value="sagittarius">Sagittarius (धनु)</option>
+        <option value="capricorn">Capricorn (मकर)</option>
+        <option value="aquarius">Aquarius (कुंभ)</option>
+        <option value="pisces">Pisces (मीन)</option>
+      </select>
+      <button id="fetchHoroscope" class="btn btn-primary">Get Daily Rashifal</button>
 
-      // Add click event listener to each nav link
+      <div id="horoscopeResult" class="mt-4"></div>
+    
+  </div>
+  
+  <!-- Rashifal Display -->
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <div id="rashifal-display" class="p-4 bg-light text-dark rounded shadow">
+        <h4 id="rashifal-title">Your Daily Rashifal</h4>
+        <p id="rashifal-text" class="mt-3">Select your Zodiac sign above to see today's Rashifal.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Client Experience Section -->
+<div class="container-fluid bg-dark text-light py-5 client-experience">
+  <div class="container text-center">
+    <h1 class="mb-5">What Our Clients Say</h1>
+    <div class="row">
+      <!-- Client 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="testimonial p-4 shadow">
+          <div class="client-img mb-3">
+            <img src="Images/client1.jpg" alt="Client Image" class="rounded-circle img-fluid">
+          </div>
+          <p class="client-quote">"Jyotish Kalash's services helped me navigate a very tough time in my life. Their insights are spot on!"</p>
+          <h5 class="client-name">Anjali Mehra</h5>
+          <p class="client-job">Entrepreneur</p>
+        </div>
+      </div>
+      <!-- Client 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="testimonial p-4 shadow">
+          <div class="client-img mb-3">
+            <img src="Images/client2.jpg" alt="Client Image" class="rounded-circle img-fluid">
+          </div>
+          <p class="client-quote">"The accuracy of the readings is incredible! I am more confident in my decisions now."</p>
+          <h5 class="client-name">Rajesh Kumar</h5>
+          <p class="client-job">Software Engineer</p>
+        </div>
+      </div>
+      <!-- Client 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="testimonial p-4 shadow">
+          <div class="client-img mb-3">
+            <img src="Images/client3.jpg" alt="Client Image" class="rounded-circle img-fluid">
+          </div>
+          <p class="client-quote">"Highly recommend Jyotish Kalash! Their astrological advice has been a game changer for me."</p>
+          <h5 class="client-name">Simran Kaur</h5>
+          <p class="client-job">Marketing Manager</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Footer Section -->
+<footer class="footer bg-dark text-light py-5">
+  <div class="container">
+    <div class="row">
+      <!-- Company Info -->
+      <div class="col-md-4">
+        <h5>Jyotish Kalash</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut velit id libero condimentum malesuada. Vivamus vel gravida mi.</p>
+        <div class="social-icons mt-3">
+          <a href="https://www.facebook.com" target="_blank" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.twitter.com" target="_blank" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com" target="_blank" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com" target="_blank" class="text-light"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      
+      <!-- Navigation Links -->
+      <div class="col-md-4">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#Home" class="text-light">Home</a></li>
+          <li><a href="#About Us" class="text-light">About Us</a></li>
+          <li><a href="#Services" class="text-light">Services</a></li>
+          <li><a href="#Rashifal" class="text-light">Rashifal</a></li>
+          <li><a href="#Contact Us" class="text-light">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div id="Contact Us" class="col-md-4">
+        <h5>Contact Us</h5>
+        <p><i class="fas fa-map-marker-alt me-2"></i>Bikaner, Rajasthan, India</p>
+        <p><i class="fas fa-phone me-2"></i><a href="tel:+911234567890" class="text-light">+91 12345 67890</a></p>
+        <p><i class="fas fa-envelope me-2"></i><a href="mailto:info@jyotishkalash.com" class="text-light">info@jyotishkalash.com</a></p>
+      </div>
+    </div>
+    
+    <div class="row mt-4">
+      <div class="col text-center">
+        <p class="mb-0">&copy; 2024 Jyotish Kalash. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- JavaScript for active links -->
+    <script>
+      const navLinks = document.querySelectorAll('.nav-link');
       navLinks.forEach(link => {
         link.addEventListener('click', function() {
-          // Remove the 'active' class and text-warning class from all nav links
           navLinks.forEach(nav => nav.classList.remove('active', 'text-warning'));
-
-          // Add the 'active' and 'text-warning' classes to the clicked link
           this.classList.add('active', 'text-warning');
         });
       });
+
+       // Sample daily Rashifal data (Replace with actual API data or logic)
+       const rashifalData = {
+    aries: "Today is a great day for new beginnings. Be bold in your choices.",
+    taurus: "You may face some financial challenges today. Stay calm and plan well.",
+    gemini: "Communication will be key today. Express your thoughts clearly.",
+    cancer: "Focus on your family and personal well-being. A peaceful day ahead.",
+    leo: "You will shine at work today. Stay confident and take the lead.",
+    virgo: "Your attention to detail will help you solve a problem today.",
+    libra: "Balance is essential today. Stay centered and avoid conflicts.",
+    scorpio: "Be mindful of your emotions today. Stay grounded.",
+    sagittarius: "Adventure awaits! Be open to new experiences.",
+    capricorn: "Hard work will pay off today. Keep pushing forward.",
+    aquarius: "Creative ideas will flow easily today. Share them with others.",
+    pisces: "Trust your intuition today. It will guide you in the right direction."
+};
+
+// Handle zodiac sign selection
+const zodiacSelect = document.getElementById('zodiac-sign');
+const rashifalDisplay = document.getElementById('rashifal-display');
+const rashifalText = document.getElementById('rashifal-text');
+const rashifalTitle = document.getElementById('rashifal-title');
+
+zodiacSelect.addEventListener('change', function() {
+    const selectedSign = this.value;
+
+    if (rashifalData[selectedSign]) {
+        rashifalText.textContent = rashifalData[selectedSign];
+        rashifalTitle.textContent = `Your Daily Rashifal for ${this.options[this.selectedIndex].text}`;
+    } else {
+        rashifalText.textContent = "Select your Zodiac sign above to see today's Rashifal.";
+        rashifalTitle.textContent = "Your Daily Rashifal";
+    }
+});
+
+document.getElementById('fetchHoroscope').addEventListener('click', function() {
+    const sign = zodiacSelect.value;
+
+    if (sign === "Select your Zodiac Sign") {
+        alert("Please select a Zodiac sign!");
+        return;
+    }
+
+    const resultDiv = document.getElementById('horoscopeResult');
+    resultDiv.innerHTML = '<p>Loading...</p>'; // Loading message
+
+    fetch('https://aztro.sameerkumar.website/', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        sign: 'aries',  // Example sign
+        day: 'today'
+    })
+    })
+    .then(response =>  {
+    // Check if the response is okay (status 200)
+    if (!response.ok) {
+        throw new Error('Network response was not ok: ' + response.statusText);
+    }
+    return response.json(); // Parse the JSON from the response
+})
+
+
+    .then(data => {
+        resultDiv.innerHTML = `
+            <h2>${data.sunsign} Daily Horoscope</h2>
+            <p><strong>Description:</strong> ${data.description}</p>
+            <p><strong>Mood:</strong> ${data.mood}</p>
+            <p><strong>Lucky Number:</strong> ${data.lucky_number}</p>
+            <p><strong>Lucky Color:</strong> ${data.lucky_color}</p>
+            <p><strong>Compatibility:</strong> ${data.compatibility}</p>
+        `;
+    })
+    .catch(error => {
+        console.error('Error fetching the horoscope:', error);
+        resultDiv.innerHTML = '<p class="text-danger">Failed to fetch horoscope. Please try again.</p>';
+    });
+});
+
     </script>
   </body>
 </html>
