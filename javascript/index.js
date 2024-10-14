@@ -6,7 +6,8 @@ navLinks.forEach(link => {
   });
 });
 
-// Replace with your actual RapidAPI Key
+// Replace with your actual RapidAPI Key;KUWHDSF;KSDGHF;sgf
+
 const apiKey = 'your-rapidapi-key'; 
 
 document.getElementById('fetchHoroscope').addEventListener('click', async () => {
